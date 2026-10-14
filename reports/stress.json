@@ -1,0 +1,532 @@
+{
+  "config": {
+    "seed": 42,
+    "accounts": 2000,
+    "cohorts": 24,
+    "events": 100000,
+    "requests": 1800,
+    "first_renewal": "2024-01-01",
+    "evaluation_as_of": "2026-03-01",
+    "capacity": 50,
+    "active_threshold": 0.2,
+    "decline_threshold": -0.4,
+    "scenario": "stress",
+    "version": "1.0",
+    "currency": "USD"
+  },
+  "performance": [
+    {
+      "split": "train",
+      "method": "Rule",
+      "precision": 0.4897959183673469,
+      "recall": 0.5981308411214953,
+      "lift": 1.0040053404539386,
+      "hits": 192,
+      "selected_resolved": 392,
+      "selected_pending": 8,
+      "precision_ci": [
+        0.4406484016429976,
+        0.5391414941132847
+      ],
+      "cohorts": [
+        {
+          "cohort": "2024-01",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 83,
+          "nonrenewals": 33,
+          "hits": 19,
+          "precision": 0.3877551020408163,
+          "recall": 0.5757575757575758,
+          "lift": 0.9752628324056896,
+          "exposure": 4024848.0
+        },
+        {
+          "cohort": "2024-02",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 83,
+          "nonrenewals": 39,
+          "hits": 23,
+          "precision": 0.46,
+          "recall": 0.5897435897435898,
+          "lift": 0.978974358974359,
+          "exposure": 3424881.0
+        },
+        {
+          "cohort": "2024-03",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 84,
+          "nonrenewals": 38,
+          "hits": 23,
+          "precision": 0.46,
+          "recall": 0.6052631578947368,
+          "lift": 1.016842105263158,
+          "exposure": 4118502.0
+        },
+        {
+          "cohort": "2024-04",
+          "k": 50,
+          "selected_resolved": 47,
+          "selected_pending": 3,
+          "resolved": 80,
+          "nonrenewals": 46,
+          "hits": 28,
+          "precision": 0.5957446808510638,
+          "recall": 0.6086956521739131,
+          "lift": 1.0360777058279371,
+          "exposure": 3825615.0
+        },
+        {
+          "cohort": "2024-05",
+          "k": 50,
+          "selected_resolved": 48,
+          "selected_pending": 2,
+          "resolved": 82,
+          "nonrenewals": 44,
+          "hits": 28,
+          "precision": 0.5833333333333334,
+          "recall": 0.6363636363636364,
+          "lift": 1.0871212121212122,
+          "exposure": 4136215.0
+        },
+        {
+          "cohort": "2024-06",
+          "k": 50,
+          "selected_resolved": 48,
+          "selected_pending": 2,
+          "resolved": 81,
+          "nonrenewals": 39,
+          "hits": 25,
+          "precision": 0.5208333333333334,
+          "recall": 0.6410256410256411,
+          "lift": 1.0817307692307694,
+          "exposure": 3528546.0
+        },
+        {
+          "cohort": "2024-07",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 83,
+          "nonrenewals": 42,
+          "hits": 22,
+          "precision": 0.44,
+          "recall": 0.5238095238095238,
+          "lift": 0.8695238095238096,
+          "exposure": 3665397.0
+        },
+        {
+          "cohort": "2024-08",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 82,
+          "nonrenewals": 40,
+          "hits": 24,
+          "precision": 0.48,
+          "recall": 0.6,
+          "lift": 0.984,
+          "exposure": 3436553.0
+        }
+      ]
+    },
+    {
+      "split": "train",
+      "method": "Random",
+      "precision": 0.48711340206185566,
+      "recall": 0.5887850467289719,
+      "lift": 0.9985065998651123,
+      "hits": 189,
+      "selected_resolved": 388,
+      "selected_pending": 12,
+      "precision_ci": [
+        0.43774854788114703,
+        0.5367309356652654
+      ],
+      "cohorts": [
+        {
+          "cohort": "2024-01",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 83,
+          "nonrenewals": 33,
+          "hits": 23,
+          "precision": 0.46938775510204084,
+          "recall": 0.696969696969697,
+          "lift": 1.1805813234384663,
+          "exposure": 3060296.0
+        },
+        {
+          "cohort": "2024-02",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 83,
+          "nonrenewals": 39,
+          "hits": 20,
+          "precision": 0.40816326530612246,
+          "recall": 0.5128205128205128,
+          "lift": 0.8686551543694401,
+          "exposure": 2416438.0
+        },
+        {
+          "cohort": "2024-03",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 84,
+          "nonrenewals": 38,
+          "hits": 22,
+          "precision": 0.44,
+          "recall": 0.5789473684210527,
+          "lift": 0.9726315789473684,
+          "exposure": 2824850.0
+        },
+        {
+          "cohort": "2024-04",
+          "k": 50,
+          "selected_resolved": 46,
+          "selected_pending": 4,
+          "resolved": 80,
+          "nonrenewals": 46,
+          "hits": 28,
+          "precision": 0.6086956521739131,
+          "recall": 0.6086956521739131,
+          "lift": 1.058601134215501,
+          "exposure": 3033876.0
+        },
+        {
+          "cohort": "2024-05",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 82,
+          "nonrenewals": 44,
+          "hits": 24,
+          "precision": 0.4897959183673469,
+          "recall": 0.5454545454545454,
+          "lift": 0.9128014842300556,
+          "exposure": 3572085.0
+        },
+        {
+          "cohort": "2024-06",
+          "k": 50,
+          "selected_resolved": 48,
+          "selected_pending": 2,
+          "resolved": 81,
+          "nonrenewals": 39,
+          "hits": 21,
+          "precision": 0.4375,
+          "recall": 0.5384615384615384,
+          "lift": 0.9086538461538463,
+          "exposure": 2580950.0
+        },
+        {
+          "cohort": "2024-07",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 83,
+          "nonrenewals": 42,
+          "hits": 27,
+          "precision": 0.5510204081632653,
+          "recall": 0.6428571428571429,
+          "lift": 1.0889212827988337,
+          "exposure": 2320963.0
+        },
+        {
+          "cohort": "2024-08",
+          "k": 50,
+          "selected_resolved": 48,
+          "selected_pending": 2,
+          "resolved": 82,
+          "nonrenewals": 40,
+          "hits": 24,
+          "precision": 0.5,
+          "recall": 0.6,
+          "lift": 1.0250000000000001,
+          "exposure": 3201640.0
+        }
+      ]
+    },
+    {
+      "split": "validation",
+      "method": "Rule",
+      "precision": 0.5524475524475524,
+      "recall": 0.6694915254237288,
+      "lift": 1.12830389949034,
+      "hits": 79,
+      "selected_resolved": 143,
+      "selected_pending": 7,
+      "precision_ci": [
+        0.4706372701211171,
+        0.6315136190002216
+      ],
+      "cohorts": [
+        {
+          "cohort": "2025-01",
+          "k": 50,
+          "selected_resolved": 46,
+          "selected_pending": 4,
+          "resolved": 79,
+          "nonrenewals": 36,
+          "hits": 25,
+          "precision": 0.5434782608695652,
+          "recall": 0.6944444444444444,
+          "lift": 1.192632850241546,
+          "exposure": 3996671.0
+        },
+        {
+          "cohort": "2025-02",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 82,
+          "nonrenewals": 40,
+          "hits": 28,
+          "precision": 0.56,
+          "recall": 0.7,
+          "lift": 1.1480000000000001,
+          "exposure": 3239105.0
+        },
+        {
+          "cohort": "2025-03",
+          "k": 50,
+          "selected_resolved": 47,
+          "selected_pending": 3,
+          "resolved": 80,
+          "nonrenewals": 42,
+          "hits": 26,
+          "precision": 0.5531914893617021,
+          "recall": 0.6190476190476191,
+          "lift": 1.0536980749746707,
+          "exposure": 4022398.0
+        }
+      ]
+    },
+    {
+      "split": "validation",
+      "method": "Random",
+      "precision": 0.49295774647887325,
+      "recall": 0.5932203389830508,
+      "lift": 1.0068035330627836,
+      "hits": 70,
+      "selected_resolved": 142,
+      "selected_pending": 8,
+      "precision_ci": [
+        0.41200167331950344,
+        0.5742848183262272
+      ],
+      "cohorts": [
+        {
+          "cohort": "2025-01",
+          "k": 50,
+          "selected_resolved": 46,
+          "selected_pending": 4,
+          "resolved": 79,
+          "nonrenewals": 36,
+          "hits": 19,
+          "precision": 0.41304347826086957,
+          "recall": 0.5277777777777778,
+          "lift": 0.9064009661835749,
+          "exposure": 3167519.0
+        },
+        {
+          "cohort": "2025-02",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 82,
+          "nonrenewals": 40,
+          "hits": 25,
+          "precision": 0.5102040816326531,
+          "recall": 0.625,
+          "lift": 1.0459183673469388,
+          "exposure": 2795637.0
+        },
+        {
+          "cohort": "2025-03",
+          "k": 50,
+          "selected_resolved": 47,
+          "selected_pending": 3,
+          "resolved": 80,
+          "nonrenewals": 42,
+          "hits": 26,
+          "precision": 0.5531914893617021,
+          "recall": 0.6190476190476191,
+          "lift": 1.0536980749746707,
+          "exposure": 3368015.0
+        }
+      ]
+    },
+    {
+      "split": "test",
+      "method": "Rule",
+      "precision": 0.4567901234567901,
+      "recall": 0.6,
+      "lift": 0.9975308641975308,
+      "hits": 111,
+      "selected_resolved": 243,
+      "selected_pending": 7,
+      "precision_ci": [
+        0.39531641015266494,
+        0.5196087888413456
+      ],
+      "cohorts": [
+        {
+          "cohort": "2025-08",
+          "k": 50,
+          "selected_resolved": 47,
+          "selected_pending": 3,
+          "resolved": 79,
+          "nonrenewals": 36,
+          "hits": 21,
+          "precision": 0.44680851063829785,
+          "recall": 0.5833333333333334,
+          "lift": 0.9804964539007092,
+          "exposure": 3136791.0
+        },
+        {
+          "cohort": "2025-09",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 81,
+          "nonrenewals": 35,
+          "hits": 22,
+          "precision": 0.44,
+          "recall": 0.6285714285714286,
+          "lift": 1.0182857142857142,
+          "exposure": 3486444.0
+        },
+        {
+          "cohort": "2025-10",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 82,
+          "nonrenewals": 37,
+          "hits": 20,
+          "precision": 0.4,
+          "recall": 0.5405405405405406,
+          "lift": 0.8864864864864865,
+          "exposure": 4831750.0
+        },
+        {
+          "cohort": "2025-11",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 82,
+          "nonrenewals": 42,
+          "hits": 24,
+          "precision": 0.4897959183673469,
+          "recall": 0.5714285714285714,
+          "lift": 0.956268221574344,
+          "exposure": 3628810.0
+        },
+        {
+          "cohort": "2025-12",
+          "k": 50,
+          "selected_resolved": 47,
+          "selected_pending": 3,
+          "resolved": 80,
+          "nonrenewals": 35,
+          "hits": 24,
+          "precision": 0.5106382978723404,
+          "recall": 0.6857142857142857,
+          "lift": 1.1671732522796352,
+          "exposure": 3262630.0
+        }
+      ]
+    },
+    {
+      "split": "test",
+      "method": "Random",
+      "precision": 0.4609053497942387,
+      "recall": 0.6054054054054054,
+      "lift": 1.006517628739851,
+      "hits": 112,
+      "selected_resolved": 243,
+      "selected_pending": 7,
+      "precision_ci": [
+        0.39932585534228904,
+        0.523701705652292
+      ],
+      "cohorts": [
+        {
+          "cohort": "2025-08",
+          "k": 50,
+          "selected_resolved": 46,
+          "selected_pending": 4,
+          "resolved": 79,
+          "nonrenewals": 36,
+          "hits": 22,
+          "precision": 0.4782608695652174,
+          "recall": 0.6111111111111112,
+          "lift": 1.0495169082125604,
+          "exposure": 2947161.0
+        },
+        {
+          "cohort": "2025-09",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 81,
+          "nonrenewals": 35,
+          "hits": 20,
+          "precision": 0.4,
+          "recall": 0.5714285714285714,
+          "lift": 0.9257142857142858,
+          "exposure": 2371077.0
+        },
+        {
+          "cohort": "2025-10",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 82,
+          "nonrenewals": 37,
+          "hits": 24,
+          "precision": 0.4897959183673469,
+          "recall": 0.6486486486486487,
+          "lift": 1.0854936569222282,
+          "exposure": 4001688.0
+        },
+        {
+          "cohort": "2025-11",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 82,
+          "nonrenewals": 42,
+          "hits": 24,
+          "precision": 0.4897959183673469,
+          "recall": 0.5714285714285714,
+          "lift": 0.956268221574344,
+          "exposure": 3165611.0
+        },
+        {
+          "cohort": "2025-12",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 80,
+          "nonrenewals": 35,
+          "hits": 22,
+          "precision": 0.4489795918367347,
+          "recall": 0.6285714285714286,
+          "lift": 1.0262390670553936,
+          "exposure": 2358078.0
+        }
+      ]
+    }
+  ],
+  "runtime_seconds": 121.80723712500185
+}

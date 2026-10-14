@@ -1,0 +1,15 @@
+{
+  "seed": 42,
+  "accounts": 2000,
+  "cohorts": 24,
+  "events": 100000,
+  "requests": 1800,
+  "first_renewal": "2024-01-01",
+  "evaluation_as_of": "2026-03-01",
+  "capacity": 50,
+  "active_threshold": 0.2,
+  "decline_threshold": -0.4,
+  "scenario": "baseline",
+  "version": "1.0",
+  "currency": "USD"
+}

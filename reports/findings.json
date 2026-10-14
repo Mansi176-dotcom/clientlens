@@ -1,0 +1,2053 @@
+{
+  "config": {
+    "seed": 42,
+    "accounts": 2000,
+    "cohorts": 24,
+    "events": 100000,
+    "requests": 1800,
+    "first_renewal": "2024-01-01",
+    "evaluation_as_of": "2026-03-01",
+    "capacity": 50,
+    "active_threshold": 0.2,
+    "decline_threshold": -0.4,
+    "scenario": "baseline",
+    "version": "1.0",
+    "currency": "USD"
+  },
+  "splits": {
+    "train": {
+      "cohorts": [
+        "2024-01",
+        "2024-02",
+        "2024-03",
+        "2024-04",
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08"
+      ],
+      "accounts": 672,
+      "resolved": 653,
+      "cutoff_min": "2023-11-02",
+      "cutoff_max": "2024-06-02",
+      "latest_outcome_available": "2024-09-15"
+    },
+    "validation": {
+      "cohorts": [
+        "2025-01",
+        "2025-02",
+        "2025-03"
+      ],
+      "accounts": 249,
+      "resolved": 242,
+      "cutoff_min": "2024-11-02",
+      "cutoff_max": "2024-12-31",
+      "latest_outcome_available": "2025-04-15"
+    },
+    "test": {
+      "cohorts": [
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12"
+      ],
+      "accounts": 415,
+      "resolved": 394,
+      "cutoff_min": "2025-06-02",
+      "cutoff_max": "2025-10-02",
+      "latest_outcome_available": "2026-01-15"
+    }
+  },
+  "performance": [
+    {
+      "split": "train",
+      "method": "Rule",
+      "precision": 0.7095115681233933,
+      "recall": 0.6258503401360545,
+      "lift": 1.050591959148698,
+      "hits": 276,
+      "selected_resolved": 389,
+      "selected_pending": 11,
+      "precision_ci": [
+        0.6625216972365949,
+        0.7524038096343678
+      ],
+      "cohorts": [
+        {
+          "cohort": "2024-01",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 82,
+          "nonrenewals": 57,
+          "hits": 36,
+          "precision": 0.72,
+          "recall": 0.631578947368421,
+          "lift": 1.0357894736842106,
+          "exposure": 3777558.0
+        },
+        {
+          "cohort": "2024-02",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 84,
+          "nonrenewals": 60,
+          "hits": 38,
+          "precision": 0.76,
+          "recall": 0.6333333333333333,
+          "lift": 1.064,
+          "exposure": 3144578.0
+        },
+        {
+          "cohort": "2024-03",
+          "k": 50,
+          "selected_resolved": 48,
+          "selected_pending": 2,
+          "resolved": 82,
+          "nonrenewals": 52,
+          "hits": 30,
+          "precision": 0.625,
+          "recall": 0.5769230769230769,
+          "lift": 0.985576923076923,
+          "exposure": 3182609.0
+        },
+        {
+          "cohort": "2024-04",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 82,
+          "nonrenewals": 53,
+          "hits": 36,
+          "precision": 0.7346938775510204,
+          "recall": 0.6792452830188679,
+          "lift": 1.136696187909126,
+          "exposure": 3308938.0
+        },
+        {
+          "cohort": "2024-05",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 81,
+          "nonrenewals": 54,
+          "hits": 34,
+          "precision": 0.6938775510204082,
+          "recall": 0.6296296296296297,
+          "lift": 1.0408163265306123,
+          "exposure": 3337323.0
+        },
+        {
+          "cohort": "2024-06",
+          "k": 50,
+          "selected_resolved": 46,
+          "selected_pending": 4,
+          "resolved": 80,
+          "nonrenewals": 53,
+          "hits": 30,
+          "precision": 0.6521739130434783,
+          "recall": 0.5660377358490566,
+          "lift": 0.9844134536505332,
+          "exposure": 4028529.0
+        },
+        {
+          "cohort": "2024-07",
+          "k": 50,
+          "selected_resolved": 48,
+          "selected_pending": 2,
+          "resolved": 80,
+          "nonrenewals": 58,
+          "hits": 35,
+          "precision": 0.7291666666666666,
+          "recall": 0.603448275862069,
+          "lift": 1.0057471264367817,
+          "exposure": 3181283.0
+        },
+        {
+          "cohort": "2024-08",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 82,
+          "nonrenewals": 54,
+          "hits": 37,
+          "precision": 0.7551020408163265,
+          "recall": 0.6851851851851852,
+          "lift": 1.1466364323507179,
+          "exposure": 3882212.0
+        }
+      ]
+    },
+    {
+      "split": "train",
+      "method": "Random",
+      "precision": 0.6889460154241646,
+      "recall": 0.6077097505668935,
+      "lift": 1.0201400183038083,
+      "hits": 268,
+      "selected_resolved": 389,
+      "selected_pending": 11,
+      "precision_ci": [
+        0.6412829322791449,
+        0.7329136904817848
+      ],
+      "cohorts": [
+        {
+          "cohort": "2024-01",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 82,
+          "nonrenewals": 57,
+          "hits": 33,
+          "precision": 0.673469387755102,
+          "recall": 0.5789473684210527,
+          "lift": 0.9688506981740065,
+          "exposure": 3360393.0
+        },
+        {
+          "cohort": "2024-02",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 84,
+          "nonrenewals": 60,
+          "hits": 39,
+          "precision": 0.78,
+          "recall": 0.65,
+          "lift": 1.092,
+          "exposure": 2612335.0
+        },
+        {
+          "cohort": "2024-03",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 82,
+          "nonrenewals": 52,
+          "hits": 30,
+          "precision": 0.6122448979591837,
+          "recall": 0.5769230769230769,
+          "lift": 0.9654631083202512,
+          "exposure": 2808280.0
+        },
+        {
+          "cohort": "2024-04",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 82,
+          "nonrenewals": 53,
+          "hits": 34,
+          "precision": 0.6938775510204082,
+          "recall": 0.6415094339622641,
+          "lift": 1.0735463996919523,
+          "exposure": 3025439.0
+        },
+        {
+          "cohort": "2024-05",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 81,
+          "nonrenewals": 54,
+          "hits": 36,
+          "precision": 0.7346938775510204,
+          "recall": 0.6666666666666666,
+          "lift": 1.1020408163265307,
+          "exposure": 2573043.0
+        },
+        {
+          "cohort": "2024-06",
+          "k": 50,
+          "selected_resolved": 47,
+          "selected_pending": 3,
+          "resolved": 80,
+          "nonrenewals": 53,
+          "hits": 29,
+          "precision": 0.6170212765957447,
+          "recall": 0.5471698113207547,
+          "lift": 0.9313528703331996,
+          "exposure": 3134160.0
+        },
+        {
+          "cohort": "2024-07",
+          "k": 50,
+          "selected_resolved": 48,
+          "selected_pending": 2,
+          "resolved": 80,
+          "nonrenewals": 58,
+          "hits": 34,
+          "precision": 0.7083333333333334,
+          "recall": 0.5862068965517241,
+          "lift": 0.9770114942528736,
+          "exposure": 3214879.0
+        },
+        {
+          "cohort": "2024-08",
+          "k": 50,
+          "selected_resolved": 48,
+          "selected_pending": 2,
+          "resolved": 82,
+          "nonrenewals": 54,
+          "hits": 33,
+          "precision": 0.6875,
+          "recall": 0.6111111111111112,
+          "lift": 1.0439814814814814,
+          "exposure": 3407461.0
+        }
+      ]
+    },
+    {
+      "split": "validation",
+      "method": "Rule",
+      "precision": 0.7278911564625851,
+      "recall": 0.6729559748427673,
+      "lift": 1.1078594959996577,
+      "hits": 107,
+      "selected_resolved": 147,
+      "selected_pending": 3,
+      "precision_ci": [
+        0.6508273585175643,
+        0.7933471927998441
+      ],
+      "cohorts": [
+        {
+          "cohort": "2025-01",
+          "k": 50,
+          "selected_resolved": 50,
+          "selected_pending": 0,
+          "resolved": 82,
+          "nonrenewals": 51,
+          "hits": 36,
+          "precision": 0.72,
+          "recall": 0.7058823529411765,
+          "lift": 1.1576470588235295,
+          "exposure": 3744585.0
+        },
+        {
+          "cohort": "2025-02",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 79,
+          "nonrenewals": 56,
+          "hits": 35,
+          "precision": 0.7142857142857143,
+          "recall": 0.625,
+          "lift": 1.0076530612244898,
+          "exposure": 3252803.0
+        },
+        {
+          "cohort": "2025-03",
+          "k": 50,
+          "selected_resolved": 48,
+          "selected_pending": 2,
+          "resolved": 81,
+          "nonrenewals": 52,
+          "hits": 36,
+          "precision": 0.75,
+          "recall": 0.6923076923076923,
+          "lift": 1.1682692307692308,
+          "exposure": 3164273.0
+        }
+      ]
+    },
+    {
+      "split": "validation",
+      "method": "Random",
+      "precision": 0.7034482758620689,
+      "recall": 0.6415094339622641,
+      "lift": 1.0706571242680545,
+      "hits": 102,
+      "selected_resolved": 145,
+      "selected_pending": 5,
+      "precision_ci": [
+        0.6246325875802841,
+        0.7717619687803032
+      ],
+      "cohorts": [
+        {
+          "cohort": "2025-01",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 82,
+          "nonrenewals": 51,
+          "hits": 32,
+          "precision": 0.6530612244897959,
+          "recall": 0.6274509803921569,
+          "lift": 1.0500200080032012,
+          "exposure": 3294042.0
+        },
+        {
+          "cohort": "2025-02",
+          "k": 50,
+          "selected_resolved": 47,
+          "selected_pending": 3,
+          "resolved": 79,
+          "nonrenewals": 56,
+          "hits": 36,
+          "precision": 0.7659574468085106,
+          "recall": 0.6428571428571429,
+          "lift": 1.080547112462006,
+          "exposure": 2904227.0
+        },
+        {
+          "cohort": "2025-03",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 81,
+          "nonrenewals": 52,
+          "hits": 34,
+          "precision": 0.6938775510204082,
+          "recall": 0.6538461538461539,
+          "lift": 1.0808477237048666,
+          "exposure": 2987464.0
+        }
+      ]
+    },
+    {
+      "split": "test",
+      "method": "Rule",
+      "precision": 0.7063829787234043,
+      "recall": 0.6335877862595419,
+      "lift": 1.0622705863245088,
+      "hits": 166,
+      "selected_resolved": 235,
+      "selected_pending": 15,
+      "precision_ci": [
+        0.6452101843435145,
+        0.7609167215221304
+      ],
+      "cohorts": [
+        {
+          "cohort": "2025-08",
+          "k": 50,
+          "selected_resolved": 45,
+          "selected_pending": 5,
+          "resolved": 77,
+          "nonrenewals": 52,
+          "hits": 30,
+          "precision": 0.6666666666666666,
+          "recall": 0.5769230769230769,
+          "lift": 0.9871794871794871,
+          "exposure": 4198524.0
+        },
+        {
+          "cohort": "2025-09",
+          "k": 50,
+          "selected_resolved": 48,
+          "selected_pending": 2,
+          "resolved": 78,
+          "nonrenewals": 57,
+          "hits": 36,
+          "precision": 0.75,
+          "recall": 0.631578947368421,
+          "lift": 1.0263157894736843,
+          "exposure": 3487286.0
+        },
+        {
+          "cohort": "2025-10",
+          "k": 50,
+          "selected_resolved": 48,
+          "selected_pending": 2,
+          "resolved": 81,
+          "nonrenewals": 51,
+          "hits": 33,
+          "precision": 0.6875,
+          "recall": 0.6470588235294118,
+          "lift": 1.0919117647058822,
+          "exposure": 4414525.0
+        },
+        {
+          "cohort": "2025-11",
+          "k": 50,
+          "selected_resolved": 47,
+          "selected_pending": 3,
+          "resolved": 79,
+          "nonrenewals": 46,
+          "hits": 31,
+          "precision": 0.6595744680851063,
+          "recall": 0.6739130434782609,
+          "lift": 1.1327474560592043,
+          "exposure": 3935853.0
+        },
+        {
+          "cohort": "2025-12",
+          "k": 50,
+          "selected_resolved": 47,
+          "selected_pending": 3,
+          "resolved": 79,
+          "nonrenewals": 56,
+          "hits": 36,
+          "precision": 0.7659574468085106,
+          "recall": 0.6428571428571429,
+          "lift": 1.080547112462006,
+          "exposure": 3465257.0
+        }
+      ]
+    },
+    {
+      "split": "test",
+      "method": "Random",
+      "precision": 0.6864406779661016,
+      "recall": 0.6183206106870229,
+      "lift": 1.0322810195368093,
+      "hits": 162,
+      "selected_resolved": 236,
+      "selected_pending": 14,
+      "precision_ci": [
+        0.6246626955561317,
+        0.7422461309360197
+      ],
+      "cohorts": [
+        {
+          "cohort": "2025-08",
+          "k": 50,
+          "selected_resolved": 46,
+          "selected_pending": 4,
+          "resolved": 77,
+          "nonrenewals": 52,
+          "hits": 33,
+          "precision": 0.717391304347826,
+          "recall": 0.6346153846153846,
+          "lift": 1.0622909698996654,
+          "exposure": 3283608.0
+        },
+        {
+          "cohort": "2025-09",
+          "k": 50,
+          "selected_resolved": 45,
+          "selected_pending": 5,
+          "resolved": 78,
+          "nonrenewals": 57,
+          "hits": 31,
+          "precision": 0.6888888888888889,
+          "recall": 0.543859649122807,
+          "lift": 0.9426900584795322,
+          "exposure": 2402109.0
+        },
+        {
+          "cohort": "2025-10",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 81,
+          "nonrenewals": 51,
+          "hits": 33,
+          "precision": 0.673469387755102,
+          "recall": 0.6470588235294118,
+          "lift": 1.069627851140456,
+          "exposure": 3516901.0
+        },
+        {
+          "cohort": "2025-11",
+          "k": 50,
+          "selected_resolved": 49,
+          "selected_pending": 1,
+          "resolved": 79,
+          "nonrenewals": 46,
+          "hits": 28,
+          "precision": 0.5714285714285714,
+          "recall": 0.6086956521739131,
+          "lift": 0.9813664596273292,
+          "exposure": 3186273.0
+        },
+        {
+          "cohort": "2025-12",
+          "k": 50,
+          "selected_resolved": 47,
+          "selected_pending": 3,
+          "resolved": 79,
+          "nonrenewals": 56,
+          "hits": 37,
+          "precision": 0.7872340425531915,
+          "recall": 0.6607142857142857,
+          "lift": 1.1105623100303952,
+          "exposure": 3454912.0
+        }
+      ]
+    }
+  ],
+  "sensitivity": [
+    {
+      "active_threshold": 0.1,
+      "decline_threshold": -0.3,
+      "precision": 0.7145557655954632
+    },
+    {
+      "active_threshold": 0.1,
+      "decline_threshold": -0.4,
+      "precision": 0.7164461247637051
+    },
+    {
+      "active_threshold": 0.1,
+      "decline_threshold": -0.5,
+      "precision": 0.7296786389413988
+    },
+    {
+      "active_threshold": 0.2,
+      "decline_threshold": -0.3,
+      "precision": 0.7150837988826816
+    },
+    {
+      "active_threshold": 0.2,
+      "decline_threshold": -0.4,
+      "precision": 0.7145522388059702
+    },
+    {
+      "active_threshold": 0.2,
+      "decline_threshold": -0.5,
+      "precision": 0.7201492537313433
+    },
+    {
+      "active_threshold": 0.3,
+      "decline_threshold": -0.3,
+      "precision": 0.7335834896810507
+    },
+    {
+      "active_threshold": 0.3,
+      "decline_threshold": -0.4,
+      "precision": 0.7359550561797753
+    },
+    {
+      "active_threshold": 0.3,
+      "decline_threshold": -0.5,
+      "precision": 0.7401869158878505
+    }
+  ],
+  "classifier": {
+    "label_source": "generator_topics",
+    "n": 1058,
+    "topics": [
+      {
+        "topic": "AI adoption",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 148
+      },
+      {
+        "topic": "Cybersecurity",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 169
+      },
+      {
+        "topic": "Cloud costs",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 152
+      },
+      {
+        "topic": "Data governance",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 166
+      },
+      {
+        "topic": "Workforce planning",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 151
+      },
+      {
+        "topic": "Other or unclear",
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 272
+      }
+    ],
+    "macro_f1": 1.0,
+    "coverage": 0.7429111531190926,
+    "abstention_rate": 0.2570888468809074,
+    "json_validity": 1.0
+  },
+  "human_classifier": {
+    "label_source": "adjudicated_topics",
+    "n": 0,
+    "topics": [
+      {
+        "topic": "AI adoption",
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      {
+        "topic": "Cybersecurity",
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      {
+        "topic": "Cloud costs",
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      {
+        "topic": "Data governance",
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      {
+        "topic": "Workforce planning",
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      },
+      {
+        "topic": "Other or unclear",
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "support": 0
+      }
+    ],
+    "macro_f1": 0.0,
+    "coverage": null,
+    "abstention_rate": null,
+    "json_validity": null
+  },
+  "llm_status": "LLM not configured / not run",
+  "cohorts": [
+    {
+      "cohort": "2024-01",
+      "cutoff": "2023-11-02",
+      "eligible": 84,
+      "resolved": 82,
+      "renewed": 25,
+      "renewal_rate": 0.3048780487804878,
+      "review_count": 50,
+      "flagged": 59,
+      "exposure": 3777558.0,
+      "active_users": 564,
+      "eligible_seats": 4121,
+      "recent": 1038,
+      "previous": 1283,
+      "consulted": 76,
+      "attended": 79,
+      "severe_open": 11,
+      "request_count": 56,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 8,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 16,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 5,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2024-02",
+      "cutoff": "2023-12-03",
+      "eligible": 84,
+      "resolved": 84,
+      "renewed": 24,
+      "renewal_rate": 0.2857142857142857,
+      "review_count": 50,
+      "flagged": 55,
+      "exposure": 3144578.0,
+      "active_users": 628,
+      "eligible_seats": 3953,
+      "recent": 1047,
+      "previous": 1327,
+      "consulted": 80,
+      "attended": 77,
+      "severe_open": 9,
+      "request_count": 47,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 5,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 8,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 14,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 9,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 4,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2024-03",
+      "cutoff": "2024-01-01",
+      "eligible": 84,
+      "resolved": 82,
+      "renewed": 30,
+      "renewal_rate": 0.36585365853658536,
+      "review_count": 50,
+      "flagged": 56,
+      "exposure": 3182609.0,
+      "active_users": 536,
+      "eligible_seats": 3184,
+      "recent": 1070,
+      "previous": 1270,
+      "consulted": 81,
+      "attended": 77,
+      "severe_open": 15,
+      "request_count": 54,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 11,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 10,
+          "gaps": 1
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 6,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2024-04",
+      "cutoff": "2024-02-01",
+      "eligible": 84,
+      "resolved": 82,
+      "renewed": 29,
+      "renewal_rate": 0.35365853658536583,
+      "review_count": 50,
+      "flagged": 52,
+      "exposure": 3308938.0,
+      "active_users": 612,
+      "eligible_seats": 3580,
+      "recent": 1120,
+      "previous": 1319,
+      "consulted": 81,
+      "attended": 82,
+      "severe_open": 14,
+      "request_count": 48,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 11,
+          "gaps": 1
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 2,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 7,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2024-05",
+      "cutoff": "2024-03-02",
+      "eligible": 84,
+      "resolved": 81,
+      "renewed": 27,
+      "renewal_rate": 0.3333333333333333,
+      "review_count": 50,
+      "flagged": 54,
+      "exposure": 3337323.0,
+      "active_users": 589,
+      "eligible_seats": 3728,
+      "recent": 1053,
+      "previous": 1330,
+      "consulted": 82,
+      "attended": 81,
+      "severe_open": 17,
+      "request_count": 50,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 9,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 9,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 7,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 9,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2024-06",
+      "cutoff": "2024-04-02",
+      "eligible": 84,
+      "resolved": 80,
+      "renewed": 27,
+      "renewal_rate": 0.3375,
+      "review_count": 50,
+      "flagged": 52,
+      "exposure": 4028529.0,
+      "active_users": 635,
+      "eligible_seats": 3859,
+      "recent": 1201,
+      "previous": 1417,
+      "consulted": 80,
+      "attended": 82,
+      "severe_open": 12,
+      "request_count": 59,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 7,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 9,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 18,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 9,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2024-07",
+      "cutoff": "2024-05-02",
+      "eligible": 84,
+      "resolved": 80,
+      "renewed": 22,
+      "renewal_rate": 0.275,
+      "review_count": 50,
+      "flagged": 62,
+      "exposure": 3181283.0,
+      "active_users": 532,
+      "eligible_seats": 3669,
+      "recent": 923,
+      "previous": 1376,
+      "consulted": 75,
+      "attended": 78,
+      "severe_open": 12,
+      "request_count": 60,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 15,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 16,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 9,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 8,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 9,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2024-08",
+      "cutoff": "2024-06-02",
+      "eligible": 84,
+      "resolved": 82,
+      "renewed": 28,
+      "renewal_rate": 0.34146341463414637,
+      "review_count": 50,
+      "flagged": 52,
+      "exposure": 3882212.0,
+      "active_users": 702,
+      "eligible_seats": 4095,
+      "recent": 1162,
+      "previous": 1344,
+      "consulted": 79,
+      "attended": 77,
+      "severe_open": 12,
+      "request_count": 66,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 15,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 8,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 14,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 17,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 8,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2024-09",
+      "cutoff": "2024-07-03",
+      "eligible": 83,
+      "resolved": 83,
+      "renewed": 35,
+      "renewal_rate": 0.42168674698795183,
+      "review_count": 50,
+      "flagged": 50,
+      "exposure": 3565093.0,
+      "active_users": 551,
+      "eligible_seats": 3250,
+      "recent": 1029,
+      "previous": 1422,
+      "consulted": 76,
+      "attended": 75,
+      "severe_open": 2,
+      "request_count": 58,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 7,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 9,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 9,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 14,
+          "gaps": 1
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 11,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2024-10",
+      "cutoff": "2024-08-02",
+      "eligible": 83,
+      "resolved": 82,
+      "renewed": 28,
+      "renewal_rate": 0.34146341463414637,
+      "review_count": 50,
+      "flagged": 51,
+      "exposure": 3000091.0,
+      "active_users": 565,
+      "eligible_seats": 3348,
+      "recent": 1007,
+      "previous": 1366,
+      "consulted": 81,
+      "attended": 80,
+      "severe_open": 9,
+      "request_count": 64,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 17,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 14,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 7,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 9,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 10,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2024-11",
+      "cutoff": "2024-09-02",
+      "eligible": 83,
+      "resolved": 79,
+      "renewed": 25,
+      "renewal_rate": 0.31645569620253167,
+      "review_count": 50,
+      "flagged": 62,
+      "exposure": 3786062.0,
+      "active_users": 635,
+      "eligible_seats": 4230,
+      "recent": 1043,
+      "previous": 1393,
+      "consulted": 78,
+      "attended": 79,
+      "severe_open": 16,
+      "request_count": 56,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 7,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 11,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 12,
+          "gaps": 1
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 8,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2024-12",
+      "cutoff": "2024-10-02",
+      "eligible": 83,
+      "resolved": 78,
+      "renewed": 24,
+      "renewal_rate": 0.3076923076923077,
+      "review_count": 50,
+      "flagged": 49,
+      "exposure": 2874040.0,
+      "active_users": 576,
+      "eligible_seats": 3017,
+      "recent": 1113,
+      "previous": 1444,
+      "consulted": 77,
+      "attended": 81,
+      "severe_open": 8,
+      "request_count": 62,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 8,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 8,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-01",
+      "cutoff": "2024-11-02",
+      "eligible": 83,
+      "resolved": 82,
+      "renewed": 31,
+      "renewal_rate": 0.3780487804878049,
+      "review_count": 50,
+      "flagged": 50,
+      "exposure": 3744585.0,
+      "active_users": 610,
+      "eligible_seats": 3645,
+      "recent": 1083,
+      "previous": 1357,
+      "consulted": 77,
+      "attended": 78,
+      "severe_open": 8,
+      "request_count": 65,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 7,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 14,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 11,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 12,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-02",
+      "cutoff": "2024-12-03",
+      "eligible": 83,
+      "resolved": 79,
+      "renewed": 23,
+      "renewal_rate": 0.2911392405063291,
+      "review_count": 50,
+      "flagged": 58,
+      "exposure": 3252803.0,
+      "active_users": 556,
+      "eligible_seats": 3732,
+      "recent": 1004,
+      "previous": 1283,
+      "consulted": 81,
+      "attended": 76,
+      "severe_open": 9,
+      "request_count": 67,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 17,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 11,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 12,
+          "gaps": 1
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 10,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-03",
+      "cutoff": "2024-12-31",
+      "eligible": 83,
+      "resolved": 81,
+      "renewed": 29,
+      "renewal_rate": 0.35802469135802467,
+      "review_count": 50,
+      "flagged": 48,
+      "exposure": 3164273.0,
+      "active_users": 656,
+      "eligible_seats": 3736,
+      "recent": 1130,
+      "previous": 1411,
+      "consulted": 78,
+      "attended": 78,
+      "severe_open": 11,
+      "request_count": 52,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 9,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 5,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 7,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 11,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 18,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 8,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-04",
+      "cutoff": "2025-01-31",
+      "eligible": 83,
+      "resolved": 80,
+      "renewed": 26,
+      "renewal_rate": 0.325,
+      "review_count": 50,
+      "flagged": 50,
+      "exposure": 4284238.0,
+      "active_users": 617,
+      "eligible_seats": 4289,
+      "recent": 1067,
+      "previous": 1252,
+      "consulted": 76,
+      "attended": 75,
+      "severe_open": 13,
+      "request_count": 56,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 9,
+          "gaps": 1
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 8,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 4,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-05",
+      "cutoff": "2025-03-02",
+      "eligible": 83,
+      "resolved": 82,
+      "renewed": 34,
+      "renewal_rate": 0.4146341463414634,
+      "review_count": 50,
+      "flagged": 52,
+      "exposure": 3880846.0,
+      "active_users": 614,
+      "eligible_seats": 3812,
+      "recent": 1093,
+      "previous": 1345,
+      "consulted": 76,
+      "attended": 78,
+      "severe_open": 7,
+      "request_count": 60,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 9,
+          "gaps": 2
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 8,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 12,
+          "gaps": 1
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 14,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 10,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-06",
+      "cutoff": "2025-04-02",
+      "eligible": 83,
+      "resolved": 83,
+      "renewed": 26,
+      "renewal_rate": 0.3132530120481928,
+      "review_count": 50,
+      "flagged": 51,
+      "exposure": 3563168.0,
+      "active_users": 533,
+      "eligible_seats": 3556,
+      "recent": 1048,
+      "previous": 1258,
+      "consulted": 78,
+      "attended": 77,
+      "severe_open": 16,
+      "request_count": 57,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 6,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-07",
+      "cutoff": "2025-05-02",
+      "eligible": 83,
+      "resolved": 80,
+      "renewed": 32,
+      "renewal_rate": 0.4,
+      "review_count": 50,
+      "flagged": 49,
+      "exposure": 3643005.0,
+      "active_users": 639,
+      "eligible_seats": 3855,
+      "recent": 1138,
+      "previous": 1354,
+      "consulted": 78,
+      "attended": 78,
+      "severe_open": 11,
+      "request_count": 79,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 15,
+          "gaps": 3
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 14,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 15,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 14,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-08",
+      "cutoff": "2025-06-02",
+      "eligible": 83,
+      "resolved": 77,
+      "renewed": 25,
+      "renewal_rate": 0.3246753246753247,
+      "review_count": 50,
+      "flagged": 51,
+      "exposure": 4198524.0,
+      "active_users": 643,
+      "eligible_seats": 4057,
+      "recent": 1055,
+      "previous": 1364,
+      "consulted": 80,
+      "attended": 77,
+      "severe_open": 3,
+      "request_count": 71,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 14,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 12,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 15,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 7,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 12,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-09",
+      "cutoff": "2025-07-03",
+      "eligible": 83,
+      "resolved": 78,
+      "renewed": 21,
+      "renewal_rate": 0.2692307692307692,
+      "review_count": 50,
+      "flagged": 59,
+      "exposure": 3487286.0,
+      "active_users": 553,
+      "eligible_seats": 3939,
+      "recent": 1003,
+      "previous": 1230,
+      "consulted": 79,
+      "attended": 75,
+      "severe_open": 10,
+      "request_count": 53,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 14,
+          "gaps": 1
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 11,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 7,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 7,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 8,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-10",
+      "cutoff": "2025-08-02",
+      "eligible": 83,
+      "resolved": 81,
+      "renewed": 30,
+      "renewal_rate": 0.37037037037037035,
+      "review_count": 50,
+      "flagged": 60,
+      "exposure": 4414525.0,
+      "active_users": 599,
+      "eligible_seats": 4503,
+      "recent": 1067,
+      "previous": 1255,
+      "consulted": 80,
+      "attended": 74,
+      "severe_open": 8,
+      "request_count": 68,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 13,
+          "gaps": 1
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 17,
+          "gaps": 3
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 14,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 11,
+          "gaps": 1
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 6,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 9,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-11",
+      "cutoff": "2025-09-02",
+      "eligible": 83,
+      "resolved": 79,
+      "renewed": 33,
+      "renewal_rate": 0.4177215189873418,
+      "review_count": 50,
+      "flagged": 52,
+      "exposure": 3935853.0,
+      "active_users": 608,
+      "eligible_seats": 3908,
+      "recent": 1092,
+      "previous": 1328,
+      "consulted": 82,
+      "attended": 78,
+      "severe_open": 12,
+      "request_count": 66,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 18,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 15,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 9,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 15,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 10,
+          "gaps": 0
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 5,
+          "gaps": 0
+        }
+      ]
+    },
+    {
+      "cohort": "2025-12",
+      "cutoff": "2025-10-02",
+      "eligible": 83,
+      "resolved": 79,
+      "renewed": 23,
+      "renewal_rate": 0.2911392405063291,
+      "review_count": 50,
+      "flagged": 59,
+      "exposure": 3465257.0,
+      "active_users": 655,
+      "eligible_seats": 4186,
+      "recent": 1055,
+      "previous": 1322,
+      "consulted": 77,
+      "attended": 69,
+      "severe_open": 11,
+      "request_count": 66,
+      "demand": [
+        {
+          "topic": "AI adoption",
+          "accounts": 13,
+          "gaps": 0
+        },
+        {
+          "topic": "Cybersecurity",
+          "accounts": 16,
+          "gaps": 0
+        },
+        {
+          "topic": "Cloud costs",
+          "accounts": 15,
+          "gaps": 0
+        },
+        {
+          "topic": "Data governance",
+          "accounts": 9,
+          "gaps": 0
+        },
+        {
+          "topic": "Workforce planning",
+          "accounts": 13,
+          "gaps": 1
+        },
+        {
+          "topic": "Other or unclear",
+          "accounts": 5,
+          "gaps": 0
+        }
+      ]
+    }
+  ],
+  "traces": [
+    {
+      "account_id": "A00000",
+      "cutoff": "2023-11-02 00:00:00",
+      "source_recent": 9,
+      "sql_recent": 9,
+      "event_ids": [
+        "E0004621",
+        "E0006524",
+        "E0013689",
+        "E0056077",
+        "E0064992",
+        "E0073001",
+        "E0073874",
+        "E0085303",
+        "E0098111"
+      ],
+      "passes": true
+    },
+    {
+      "account_id": "A00001",
+      "cutoff": "2023-12-03 00:00:00",
+      "source_recent": 14,
+      "sql_recent": 14,
+      "event_ids": [
+        "E0003577",
+        "E0018378",
+        "E0019935",
+        "E0036530",
+        "E0038637",
+        "E0059555",
+        "E0063100",
+        "E0064070",
+        "E0073314",
+        "E0077189",
+        "E0081432",
+        "E0082001",
+        "E0091188",
+        "E0095389"
+      ],
+      "passes": true
+    },
+    {
+      "account_id": "A00002",
+      "cutoff": "2024-01-01 00:00:00",
+      "source_recent": 5,
+      "sql_recent": 5,
+      "event_ids": [
+        "E0002985",
+        "E0004217",
+        "E0007707",
+        "E0063837",
+        "E0084520"
+      ],
+      "passes": true
+    },
+    {
+      "account_id": "A00003",
+      "cutoff": "2024-02-01 00:00:00",
+      "source_recent": 7,
+      "sql_recent": 7,
+      "event_ids": [
+        "E0024323",
+        "E0031117",
+        "E0041545",
+        "E0087705",
+        "E0090628",
+        "E0094865",
+        "E0095953"
+      ],
+      "passes": true
+    },
+    {
+      "account_id": "A00004",
+      "cutoff": "2024-03-02 00:00:00",
+      "source_recent": 11,
+      "sql_recent": 11,
+      "event_ids": [
+        "E0001884",
+        "E0007440",
+        "E0014102",
+        "E0021157",
+        "E0027395",
+        "E0040532",
+        "E0054308",
+        "E0057466",
+        "E0061634",
+        "E0065730",
+        "E0071970"
+      ],
+      "passes": true
+    }
+  ],
+  "join_checks": {
+    "account_rows": 2000,
+    "unique_accounts": 2000,
+    "source_recent": 25641,
+    "passed": true
+  }
+}
